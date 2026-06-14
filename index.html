@@ -3,52 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>从零开始的代码日志</title>
-    <!-- 引入外部样式表 -->
+    <title>🐝 0ffbee's Blog</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
     <header>
-      <h1>我的独立代码日志</h1>
-      <p class="subtitle">👋 告别繁琐模板，从零开始的纯原生进化之路。</p>
+      <h1>代码日志</h1>
+      <p class="subtitle">👋</p>
     </header>
 
-    <main>
-      <!-- 自我介绍区块 -->
-      <section>
-        <h2>关于我</h2>
-        <p>
-          你好！这是一个完全由我手写 HTML/CSS
-          搭建的个人主页。我不打算折腾那些复杂的自动化模板了，在这里，每一行代码都由我亲自掌控。
-        </p>
-        <p>
-          目前正在练习：
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">Git & GitHub</span>
-        </p>
-      </section>
+    <main id="content" class="post-item">我的博客</main>
 
-      <hr class="divider" />
-
-      <!-- 文章列表区块 -->
-      <section>
-        <h2>日志归档</h2>
-
-        <!-- 第一篇文章 -->
-        <article class="post-item">
-          <span class="post-date">2026年6月14日</span>
-          <h3>重新开始：删号重练的爽快感</h3>
-          <p>
-            今天折腾了好久的 GitHub Pages 模板，各种报错和按钮失效。痛定思痛，我决定把仓库删掉重建！从最简单的
-            <code>index.html</code> 开始写起。虽然现在它看起来很素，但我拥有它 100% 的控制权，这种感觉太爽了。
-          </p>
-        </article>
-      </section>
-    </main>
+    <script>
+      // 用 JS 去读取你本地写好的文章（比如叫 my-post.md）
+      fetch("my-post.md")
+        .then((response) => response.text())
+        .then((text) => {
+          // 用 Marked.js 把纯 Markdown 文本翻译成 HTML，并塞进网页里
+          document.getElementById("content").innerHTML = marked.parse(text);
+        })
+        .catch((err) => {
+          document.getElementById("content").innerHTML = "文章加载失败啦 😭";
+        });
+    </script>
 
     <footer>
-      <p>© 2026 基于 GitHub Pages 纯手工打造</p>
+      <p>纯手工打造的博客</p>
     </footer>
   </body>
 </html>
