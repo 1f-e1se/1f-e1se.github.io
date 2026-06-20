@@ -3,15 +3,15 @@
 layout: home
 
 hero:
-  name: "🐝 0ffbee's Blog"
-  text: "0ffbee's Thoughts and Writings"
-  tagline: My great project tagline
+  name: "0ffbee's Thoughts and Writings"
+  text:
+  tagline:
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Blog
+      link: /blog/index
     - theme: alt
-      text: API Examples
+      text: About Me
       link: /api-examples
 
 features:
@@ -19,7 +19,8 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: Feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
